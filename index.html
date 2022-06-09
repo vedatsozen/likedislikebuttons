@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIKE and DISLIKE BUTTON</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1><span id="likespan">LIKE</span> OR <span id="dislikespan">DISLIKE</span></h1>
+
+    <div id="container">
+        <div id="like" class="ld" onclick="liked()">LIKE</div>
+        <div id="dislike" class="ld" onclick="disliked()">DISLIKE</div>
+    </div>
+</body>
+
+<script>
+
+function liked() {
+
+document.getElementById("like").classList.add("liked");
+document.getElementById("dislike").classList.remove("disliked");
+document.getElementById("like").innerHTML = "LIKED";
+document.getElementById("dislike").innerHTML = "DISLIKE";
+
+};
+
+function disliked() {
+
+document.getElementById("dislike").classList.add("disliked");
+document.getElementById("like").classList.remove("liked");
+document.getElementById("dislike").innerHTML = "DISLIKED";
+document.getElementById("like").innerHTML = "LIKE";
+
+};
+
+</script>
+</html>
